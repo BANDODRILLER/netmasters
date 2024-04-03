@@ -365,9 +365,10 @@ class HomePageController extends Controller
 
             $score = Scores::where('home_team', 'LIKE', trim($fixture->home_team))
                 ->where('away_team', 'LIKE', trim($fixture->away_team))
-                ->whereRaw('1 COLLATE utf8mb4_general_ci') // Case-insensitive
+                ->whereRaw('1') // Remove the COLLATE statement
                 ->limit(1)
                 ->first();
+
 
             $fixture->score = $score ? $score->score : null;
 

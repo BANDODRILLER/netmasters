@@ -17,14 +17,12 @@ class UpdateFixtureOdds extends Command
 
     public function handle($date = null)
     {
-
-
-        // If $date is not provided, default to today's date
-        $todayDate = $date ?: Carbon::now()->format('D d/m');
-
+        // Get today's date
+        $todayDateTime = $date ?: Carbon::now()->format('D d/m : H:i');
 
         // Retrieve fixtures for today and later dates
-        $fixtures = Fixtures::all();
+        $fixtures = Fixtures::where('match_datetime','>=', $todayDateTime	)->get();
+
 
 
 

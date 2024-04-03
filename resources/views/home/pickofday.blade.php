@@ -64,13 +64,14 @@
                                 <td class="border-r">{{$t->odds_X}}</td>
                                 <td class="border-r">{{$t->odds_2}}</td>
                                 <td class="border-r hide-on-mobile">{{$t->score}}</td>
-                                <td class="px-4 py-3 text-xs">
+                                <td class="border-r hide-on-mobile">
                                     <span
                                         class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
                                     >
                                       {{$t->tip}}
                                     </span>
-                                </td>                                <td class="border-r hide-on-mobile">{{$t->cs1}}</td>
+                                </td>
+                                <td class="border-r hide-on-mobile">{{$t->cs1}}</td>
                                 <td class="border-r hide-on-mobile">{{$t->cs2}}</td>
                                 <td class="border-r hide-on-mobile">{{$t->cs3}}</td>
                                 <td class="border-r hide-on-mobile">{{$t->plus_1_5}}</td>
